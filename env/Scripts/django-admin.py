@@ -1,4 +1,4 @@
-#!c:\sunitha\djangopg\env\Scripts\python.exe
+#!c:\sunitha\DjangoPollApp\DjangoPollApp\env\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

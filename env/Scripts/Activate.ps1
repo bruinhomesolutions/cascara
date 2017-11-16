@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="c:\sunitha\djangopg\env"
+$env:VIRTUAL_ENV="c:\sunitha\DjangoPollApp\DjangoPollApp\env"
 
 # Set the prompt to include the env name
 # Make sure _OLD_VIRTUAL_PROMPT is global

@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=c:\sunitha\djangopg\env"
+set "VIRTUAL_ENV=c:\sunitha\DjangoPollApp\DjangoPollApp\env"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
