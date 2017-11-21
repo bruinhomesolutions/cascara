@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'DjangoPollApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgresqldatabase46657',
-        'USER': 'cascara_admin@cascara-postgresqldbserver',
-        'PASSWORD': 'Bruinhome2017',
-        'HOST': 'cascara-postgresqldbserver.postgres.database.azure.com',
+        'NAME': os.environ.get('DATABASENAME', ''),
+        'USER': os.environ.get('DATABASEUSER', ''),
+        'PASSWORD': os.environ.get('DATABASEPASSWORD', ''),
+        'HOST': os.environ.get('DATABASEHOST', ''),
         'PORT': '',
     }
 }
