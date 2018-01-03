@@ -1,0 +1,1331 @@
+2017-11-14 02:14:43.466234: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-14 02:14:43.512902: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-14 02:15:02.831641: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x01DF0AF0>
+2017-11-14 02:15:02.847284: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-14 02:15:02.847284: wfastcgi.py 2.1.1 initialized
+2017-11-14 02:23:36.906429: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-14 02:23:36.937706: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-14 02:23:39.291066: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02633E10>
+2017-11-14 02:23:39.291066: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-14 02:23:39.306664: wfastcgi.py 2.1.1 initialized
+2017-11-14 02:24:07.912188: wfastcgi.py exiting because mysite\settings.py has changed, matching .*((\.py)|(\.config))$
+2017-11-14 02:24:11.771627: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-14 02:24:11.787236: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-14 02:24:14.145976: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+ImportError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-14 02:24:14.177224: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+ImportError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+2017-11-14 02:24:14.192851: wfastcgi.py 2.1.1 closed
+2017-11-16 17:05:43.335807: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:05:43.398310: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:05:58.666899: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+ImportError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:05:58.698154: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+ImportError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+2017-11-16 17:05:58.698154: wfastcgi.py 2.1.1 closed
+2017-11-16 17:05:59.057555: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:05:59.088773: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:06:01.910881: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+ImportError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:06:01.942150: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+ImportError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+2017-11-16 17:06:01.957756: wfastcgi.py 2.1.1 closed
+2017-11-16 17:21:01.079555: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:21:01.108202: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:21:08.579626: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:21:08.610893: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+2017-11-16 17:21:08.626500: wfastcgi.py 2.1.1 closed
+2017-11-16 17:21:08.907774: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:21:08.939024: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:21:11.945381: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:21:11.976623: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+2017-11-16 17:21:11.976623: wfastcgi.py 2.1.1 closed
+2017-11-16 17:23:09.210554: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:23:09.241825: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:23:12.478126: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:23:12.509353: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+2017-11-16 17:23:12.509353: wfastcgi.py 2.1.1 closed
+2017-11-16 17:23:12.806250: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:23:12.837478: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:23:15.508210: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:23:15.539450: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+2017-11-16 17:23:15.555037: wfastcgi.py 2.1.1 closed
+2017-11-16 17:23:44.548055: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:23:44.594941: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:23:47.952412: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:23:47.990950: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+2017-11-16 17:23:48.006575: wfastcgi.py 2.1.1 closed
+2017-11-16 17:23:48.350323: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 17:23:48.381587: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 17:23:51.245662: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+
+
+StdOut: 
+
+StdErr: 
+2017-11-16 17:23:51.276938: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 21, in <module>
+    import psycopg2 as Database
+  File "D:\home\site\wwwroot\env\lib\site-packages\psycopg2\__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: No module named 'psycopg2._psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python34\Scripts\wfastcgi.py", line 711, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\Python34\Scripts\wfastcgi.py", line 568, in read_wsgi_handler
+    return env, get_wsgi_handler(handler_name)
+  File "D:\Python34\Scripts\wfastcgi.py", line 541, in get_wsgi_handler
+    handler = handler()
+  File ".\ptvs_virtualenv_proxy.py", line 116, in get_venv_handler
+    handler = get_wsgi_handler(os.getenv('WSGI_ALT_VIRTUALENV_HANDLER'))
+  File ".\ptvs_virtualenv_proxy.py", line 75, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\core\wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2254, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2237, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2226, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\contrib\auth\base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 124, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\base.py", line 330, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\models\options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "D:\Python34\lib\importlib\__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "D:\home\site\wwwroot\env\lib\site-packages\django\db\backends\postgresql\base.py", line 25, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2._psycopg'
+2017-11-16 17:23:51.276938: wfastcgi.py 2.1.1 closed
+2017-11-16 18:04:51.248770: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-16 18:04:51.264368: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-16 18:05:01.314744: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x021DECB0>
+2017-11-16 18:05:01.314744: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-16 18:05:01.314744: wfastcgi.py 2.1.1 initialized
+2017-11-17 01:28:31.006817: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-17 01:28:31.588177: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-17 01:28:45.084918: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02AB1B30>
+2017-11-17 01:28:45.084918: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-17 01:28:45.084918: wfastcgi.py 2.1.1 initialized
+2017-11-17 01:46:01.960601: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-17 01:46:01.991909: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-17 01:46:21.226460: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02C3A630>
+2017-11-17 01:46:21.226460: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-17 01:46:21.226460: wfastcgi.py 2.1.1 initialized
+2017-11-17 02:03:18.525803: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-17 02:03:18.558199: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-17 02:03:23.821771: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-17 02:03:23.853042: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-17 02:03:36.127343: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02F88F50>
+2017-11-17 02:03:36.142968: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-17 02:03:36.142968: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x022AF950>
+2017-11-17 02:03:36.142968: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-17 02:03:36.142968: wfastcgi.py 2.1.1 initialized
+2017-11-17 02:03:36.158591: wfastcgi.py 2.1.1 initialized
+2017-11-21 02:42:31.823741: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-21 02:42:32.167469: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-21 02:42:50.597169: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02241EB0>
+2017-11-21 02:42:50.612750: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-21 02:42:50.612750: wfastcgi.py 2.1.1 initialized
+2017-11-21 02:43:24.106228: wfastcgi.py exiting because DjangoPollApp\settings.py has changed, matching .*((\.py)|(\.config))$
+2017-11-21 02:44:34.002083: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-21 02:44:34.017747: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-21 02:44:52.776935: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02892EB0>
+2017-11-21 02:44:52.776935: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-21 02:44:52.792583: wfastcgi.py 2.1.1 initialized
+2017-11-21 03:03:06.702284: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2017-11-21 03:03:06.733514: Getting handler django.core.wsgi.get_wsgi_application()
+2017-11-21 03:03:10.436541: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02A20D90>
+2017-11-21 03:03:10.436541: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2017-11-21 03:03:10.436541: wfastcgi.py 2.1.1 initialized
+2018-01-03 03:41:14.099844: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2018-01-03 03:41:14.709147: Getting handler django.core.wsgi.get_wsgi_application()
+2018-01-03 03:41:34.365197: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02961ED0>
+2018-01-03 03:41:34.365197: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 03:41:34.384385: wfastcgi.py 2.1.1 initialized
+2018-01-03 04:03:47.190860: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2018-01-03 04:03:47.206508: Getting handler django.core.wsgi.get_wsgi_application()
+2018-01-03 04:03:49.487853: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02771ED0>
+2018-01-03 04:03:49.503485: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 04:03:49.503485: wfastcgi.py 2.1.1 initialized
+2018-01-03 04:08:50.647054: wfastcgi.py exiting because getdata\views.py has changed, matching .*((\.py)|(\.config))$
+2018-01-03 04:09:22.456195: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2018-01-03 04:09:22.503023: Getting handler django.core.wsgi.get_wsgi_application()
+2018-01-03 04:09:25.190526: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02060DB0>
+2018-01-03 04:09:25.206143: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 04:09:25.221785: wfastcgi.py 2.1.1 initialized
+2018-01-03 04:10:28.446196: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
+2018-01-03 04:10:28.492856: Getting handler django.core.wsgi.get_wsgi_application()
+2018-01-03 04:10:30.852839: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02100D90>
+2018-01-03 04:10:30.868463: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 04:10:30.868463: wfastcgi.py 2.1.1 initialized
+2018-01-03 04:26:50.181511: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\python362x86\wfastcgi.py", line 791, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\home\python362x86\wfastcgi.py", line 633, in read_wsgi_handler
+    handler = get_wsgi_handler(os.getenv("WSGI_HANDLER"))
+  File "D:\home\python362x86\wfastcgi.py", line 605, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\python362x86\lib\site-packages\django\core\wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\python362x86\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\python362x86\lib\site-packages\django\apps\registry.py", line 112, in populate
+    app_config.import_models()
+  File "D:\home\python362x86\lib\site-packages\django\apps\config.py", line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Repos\azure-python-siteextensions\source_packages\pythonx86.3.6.2\tools\Lib\importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File ".\app\models.py", line 21, in <module>
+    class Choice(models.Model):
+  File ".\app\models.py", line 23, in Choice
+    poll = models.ForeignKey(Poll)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+
+
+StdOut: 
+
+StdErr: 
+2018-01-03 04:26:50.197139: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\python362x86\wfastcgi.py", line 791, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\home\python362x86\wfastcgi.py", line 633, in read_wsgi_handler
+    handler = get_wsgi_handler(os.getenv("WSGI_HANDLER"))
+  File "D:\home\python362x86\wfastcgi.py", line 605, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\python362x86\lib\site-packages\django\core\wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\python362x86\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\python362x86\lib\site-packages\django\apps\registry.py", line 112, in populate
+    app_config.import_models()
+  File "D:\home\python362x86\lib\site-packages\django\apps\config.py", line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Repos\azure-python-siteextensions\source_packages\pythonx86.3.6.2\tools\Lib\importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File ".\app\models.py", line 21, in <module>
+    class Choice(models.Model):
+  File ".\app\models.py", line 23, in Choice
+    poll = models.ForeignKey(Poll)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+2018-01-03 04:26:50.213056: Running on_exit tasks
+2018-01-03 04:26:50.213056: wfastcgi.py 3.0.0 closed
+2018-01-03 04:27:06.487392: Error occurred while reading WSGI handler:
+
+Traceback (most recent call last):
+  File "D:\home\python362x86\wfastcgi.py", line 791, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\home\python362x86\wfastcgi.py", line 633, in read_wsgi_handler
+    handler = get_wsgi_handler(os.getenv("WSGI_HANDLER"))
+  File "D:\home\python362x86\wfastcgi.py", line 605, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\python362x86\lib\site-packages\django\core\wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\python362x86\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\python362x86\lib\site-packages\django\apps\registry.py", line 112, in populate
+    app_config.import_models()
+  File "D:\home\python362x86\lib\site-packages\django\apps\config.py", line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Repos\azure-python-siteextensions\source_packages\pythonx86.3.6.2\tools\Lib\importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File ".\app\models.py", line 21, in <module>
+    class Choice(models.Model):
+  File ".\app\models.py", line 23, in Choice
+    poll = models.ForeignKey(Poll)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+
+
+StdOut: 
+
+StdErr: 
+2018-01-03 04:27:06.518590: Unhandled exception in wfastcgi.py: Traceback (most recent call last):
+  File "D:\home\python362x86\wfastcgi.py", line 791, in main
+    env, handler = read_wsgi_handler(response.physical_path)
+  File "D:\home\python362x86\wfastcgi.py", line 633, in read_wsgi_handler
+    handler = get_wsgi_handler(os.getenv("WSGI_HANDLER"))
+  File "D:\home\python362x86\wfastcgi.py", line 605, in get_wsgi_handler
+    handler = handler()
+  File "D:\home\python362x86\lib\site-packages\django\core\wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "D:\home\python362x86\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\home\python362x86\lib\site-packages\django\apps\registry.py", line 112, in populate
+    app_config.import_models()
+  File "D:\home\python362x86\lib\site-packages\django\apps\config.py", line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File "D:\Repos\azure-python-siteextensions\source_packages\pythonx86.3.6.2\tools\Lib\importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File ".\app\models.py", line 21, in <module>
+    class Choice(models.Model):
+  File ".\app\models.py", line 23, in Choice
+    poll = models.ForeignKey(Poll)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+2018-01-03 04:27:06.518590: Running on_exit tasks
+2018-01-03 04:27:06.534191: wfastcgi.py 3.0.0 closed
+2018-01-03 04:32:30.284482: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 04:32:30.284482: wfastcgi.py 3.0.0 initialized
+2018-01-03 04:35:04.515398: wfastcgi.py exiting because DjangoPollApp\urls.py has changed, matching .*((\.py)|(\.config))$
+2018-01-03 04:35:04.515398: Running on_exit tasks
+2018-01-03 04:35:10.240443: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 04:35:10.256021: wfastcgi.py 3.0.0 initialized
+2018-01-03 04:36:40.948812: wfastcgi.py exiting because DjangoPollApp\urls.py has changed, matching .*((\.py)|(\.config))$
+2018-01-03 04:36:40.964415: Running on_exit tasks
+2018-01-03 04:36:46.902809: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
+2018-01-03 04:36:46.918432: wfastcgi.py 3.0.0 initialized
