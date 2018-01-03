@@ -1,8 +1,7 @@
 """
-Definition of urls for DjangoPollApp.
+Definition of urls for CascaraApp.
 """
 
-from datetime import datetime
 from django.conf.urls import url, include
 from django.contrib import admin
 import django.contrib.auth.views

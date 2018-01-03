@@ -1161,7 +1161,7 @@ django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No m
 2017-11-21 02:42:50.597169: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02241EB0>
 2017-11-21 02:42:50.612750: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
 2017-11-21 02:42:50.612750: wfastcgi.py 2.1.1 initialized
-2017-11-21 02:43:24.106228: wfastcgi.py exiting because DjangoPollApp\settings.py has changed, matching .*((\.py)|(\.config))$
+2017-11-21 02:43:24.106228: wfastcgi.py exiting because CascaraApp\settings.py has changed, matching .*((\.py)|(\.config))$
 2017-11-21 02:44:34.002083: Activating venv with executable at D:\home\site\wwwroot\env\Scripts\python.exe
 2017-11-21 02:44:34.017747: Getting handler django.core.wsgi.get_wsgi_application()
 2017-11-21 02:44:52.776935: Got handler: <django.core.handlers.wsgi.WSGIHandler object at 0x02892EB0>
@@ -1321,11 +1321,11 @@ TypeError: __init__() missing 1 required positional argument: 'on_delete'
 2018-01-03 04:27:06.534191: wfastcgi.py 3.0.0 closed
 2018-01-03 04:32:30.284482: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
 2018-01-03 04:32:30.284482: wfastcgi.py 3.0.0 initialized
-2018-01-03 04:35:04.515398: wfastcgi.py exiting because DjangoPollApp\urls.py has changed, matching .*((\.py)|(\.config))$
+2018-01-03 04:35:04.515398: wfastcgi.py exiting because CascaraApp\urls.py has changed, matching .*((\.py)|(\.config))$
 2018-01-03 04:35:04.515398: Running on_exit tasks
 2018-01-03 04:35:10.240443: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
 2018-01-03 04:35:10.256021: wfastcgi.py 3.0.0 initialized
-2018-01-03 04:36:40.948812: wfastcgi.py exiting because DjangoPollApp\urls.py has changed, matching .*((\.py)|(\.config))$
+2018-01-03 04:36:40.948812: wfastcgi.py exiting because CascaraApp\urls.py has changed, matching .*((\.py)|(\.config))$
 2018-01-03 04:36:40.964415: Running on_exit tasks
 2018-01-03 04:36:46.902809: wfastcgi.py will restart when files in D:\home\site\wwwroot\ are changed: .*((\.py)|(\.config))$
 2018-01-03 04:36:46.918432: wfastcgi.py 3.0.0 initialized

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import DataForm
+from .models import DataPoint
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
@@ -21,5 +22,6 @@ def index(request):
     # if a GET (or any other method) we'll create a blank form
     else:
         form = DataForm()
-    vers = django.get_version()
-    return render(request, 'getdata/index.html', {'form': form,'version': vers})
+    data = DataPoint.objects.all()
+    version = django.get_version()
+    return render(request, 'getdata/index.html', {'form': form,'version': version,'data': data})
