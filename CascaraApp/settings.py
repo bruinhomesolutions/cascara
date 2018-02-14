@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     # Add your apps here to enable them
     'getdata.apps.GetdataConfig',
+    'graph.apps.GraphConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
